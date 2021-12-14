@@ -5,6 +5,7 @@ the one which displays tweets.
 #compose {
   text-align: center;
   font-family: "Source Sans Pro";
+  font-weight: bold;
 }
 
 /* 
@@ -29,6 +30,14 @@ textarea {
   background-color: #f4f1ec;
   border-bottom-width: medium;
   border-bottom-color: #545149;
+}
+
+/*
+form
+*/
+form{
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 /* 
