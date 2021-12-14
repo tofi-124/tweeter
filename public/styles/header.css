@@ -5,13 +5,20 @@ and align item.
 TODO: z-index: auto, does it work?
 */
 
-header{
-  display: flex;
-  height: 400px;
+header {
   width: 100%;
-  justify-content: center;
-  flex-direction: column;
+  height: 400px;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-image: url(../images/concrete-wall-2.png);
   z-index: auto;
+}
+
+/*
+Default was bold turned it to noraml.
+*/
+header h2 {
+  font-weight: normal;
 }
