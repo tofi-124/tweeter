@@ -1,0 +1,17 @@
+/* 
+To properly display the items, I added the header files, made it a container 
+for all of the divs inside, and used justify conetnert flex direction 
+and align item.
+TODO: background-image doesn load!
+*/
+
+header{
+  display: flex;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(/public/images/profile-hex.png);
+  background-color:antiquewhite;
+}

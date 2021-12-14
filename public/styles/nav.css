@@ -1,7 +1,9 @@
 /*
 All elements within nav are affected by the nav bar below.
 It's the nav bar's container.
+TODO: Full width of the viewport
 */
+
 nav {
   height: 120px;
   display: flex;
@@ -9,6 +11,7 @@ nav {
   color: #ffffff;
   flex-direction: row;
   background-color: #4056a1;
+  z-index: auto;
 }
 
 /*
