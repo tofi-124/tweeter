@@ -11,6 +11,8 @@ nav {
   color: #ffffff;
   flex-direction: row;
   background-color: #4056a1;
+  position: fixed;
+  top: 0;
 }
 
 /*
