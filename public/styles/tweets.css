@@ -35,7 +35,7 @@ This here controls the actual tweets, the once that are just above our input box
 }
 
 /* 
-The properites of our user name lies here.
+The properties of our user name lies here.
 */
 .name {
   display: flex;
@@ -45,7 +45,7 @@ The properites of our user name lies here.
 }
 
 /* 
-The properites of our handle (@user) lies here.
+The properties of our handle (@user) lies here.
 */
 .handle {
   display: flex;
@@ -64,7 +64,7 @@ A container for our name and handle/header/, so that we can fix the layout as ne
 }
 
 /* 
-The properites of our user icons lies here.
+The properties of our user icons lies here.
 */
 .icons {
   display: flex;
@@ -74,7 +74,7 @@ The properites of our user icons lies here.
 }
 
 /* 
-The properites of our specfic icons lies here, its here that we can add the hovering effect.
+The properties of our specific icons lies here, its here that we can add the hovering effect.
 */
 a:hover{
   color: #8f7f53;

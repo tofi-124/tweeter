@@ -24,7 +24,7 @@ The header or 'tweeter' title is held at the top by the bungee id below.
 
 /* 
 This two ids hold the 'write new tweet' and 'tweeter' logo properties,
-They are separate as the arrow should have a diffrent color(red).
+They are separate as the arrow should have a different color(red).
 */
 #newTweet {
   margin-left: auto;

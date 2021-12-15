@@ -1,6 +1,6 @@
 /* 
 To properly display the items, I added the header files, made it a container 
-for all of the divs inside, and used justify conetnert flex direction 
+for all of the divs inside, and used justify content flex direction 
 and align item.
 TODO: z-index: auto, does it work? it does but you hvae to postion it.
 */
@@ -17,7 +17,7 @@ TODO: z-index: auto, does it work? it does but you hvae to postion it.
 }
 
 /*
-Default was bold turned it to noraml.
+Default was bold turned it to normal.
 */
 #headerProfile h2 {
   font-weight: normal;
