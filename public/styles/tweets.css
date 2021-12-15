@@ -35,12 +35,13 @@ This here controls the actual tweets, the once that are just above our input box
 }
 
 /* 
-A container for our name and handle/header/, so that we can fix the layout as needed
+The properites of our user name lies here.
 */
-.name-handle {
+.name {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 1cm;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
 }
 
 /* 
@@ -54,23 +55,12 @@ The properites of our handle (@user) lies here.
 }
 
 /* 
-A container for our time and icon/footer/, so that we can fix the layout as needed.
+A container for our name and handle/header/, so that we can fix the layout as needed
 */
-.time-icon {
+.name-handle {
   display: flex;
-  font-size: medium;
   flex-direction: row;
-  padding: 0.5em;
-}
-
-/* 
-The properites of our user name lies here.
-*/
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: lighter;
+  margin-bottom: 1cm;
 }
 
 /* 
@@ -87,5 +77,18 @@ The properites of our user icons lies here.
 The properites of our specfic icons lies here, its here that we can add the hovering effect.
 */
 a:hover{
-  color: #545149;
+  color: #8f7f53;
 }
+
+/* 
+A container for our time and icon/footer/, so that we can fix the layout as needed.
+*/
+.time-icon {
+  display: flex;
+  font-size: medium;
+  flex-direction: row;
+  padding: 0.5em;
+}
+
+
+
