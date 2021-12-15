@@ -4,8 +4,12 @@ $(document).ready(function () {
   $("#tweet-text").keypress(function () {
     $('output[name="counter"]').html(139 - this.value.length);
     if (139 - this.value.length < 0) {
-      $('output[name="counter"]').css("color", "red");
-    } else $('output[name="counter"]').css("color", "#545149");
+      $('output[name="counter"]').removeClass('counter-default-changer')
+      $('output[name="counter"]').addClass('counter-red-changer')
+    } else {
+      $('output[name="counter"]').removeClass('counter-red-changer')
+      $('output[name="counter"]').addClass('counter-default-changer')
+    }
   });
 });
 /*
