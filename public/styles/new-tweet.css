@@ -1,3 +1,10 @@
+.counter-red-changer{
+  color: red
+}
+.counter-default-changer{
+  color: #545149
+}
+
 /*
 The compose id is used for the styling of the tweeter box,
 the one which displays tweets. 
@@ -21,7 +28,7 @@ The container holds all of the main's contents, its not a flexbox.
 The text area contains the input box for tweets, which is 100% of the width of the page.
 the main div or the container This css is where you'll find the properties for it.
 */
-textarea {
+#tweet-text {
   width: 100%;
   height: 1cm;
   outline: none;
