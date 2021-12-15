@@ -2,10 +2,10 @@
 To properly display the items, I added the header files, made it a container 
 for all of the divs inside, and used justify conetnert flex direction 
 and align item.
-TODO: z-index: auto, does it work?
+TODO: z-index: auto, does it work? it does but you hvae to postion it.
 */
 
-header {
+#headerProfile {
   width: 100%;
   height: 400px;
   display: flex;
@@ -13,12 +13,12 @@ header {
   flex-direction: column;
   justify-content: center;
   background-image: url(../images/concrete-wall-2.png);
-  z-index: auto;
 }
 
 /*
 Default was bold turned it to noraml.
 */
-header h2 {
+#headerProfile h2 {
   font-weight: normal;
 }
+
