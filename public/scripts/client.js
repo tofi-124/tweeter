@@ -61,10 +61,10 @@ const createTweetElement = function (obj) {
 //Takes in this array of objects and render them to the DOM
 const renderTweets = function (tweets) {
   const $tweetsContainer = $("#tweets-container");
-  $tweetsContainer.empty;
+  $tweetsContainer.html('');
   for (let tweetsOfData of tweets) {
     $tweet = createTweetElement(tweetsOfData);
-    $tweetsContainer.append($tweet);
+    $tweetsContainer.prepend($tweet);
   }
 };
 
@@ -80,6 +80,7 @@ $form.on("submit", function (event) {
   event.preventDefault();
   console.log("The form was submitted!");
 
+  //form validation
   if ($("textarea", this).val().length === 0) {
     alert("Character empty");
   } else if ($("textarea", this).val().length > 140) {
@@ -93,9 +94,9 @@ $form.on("submit", function (event) {
       url: "/tweets/",
       method: "POST",
       data: serializedData,
-      success: function (data) {
-        console.log("success");
-      },
+      // This gets called after POST /tweets/. its a callback as we want the data
+      // to actually be there before it gets fetched.
+      success: () => loadTweets(),
     });
   }
 });
