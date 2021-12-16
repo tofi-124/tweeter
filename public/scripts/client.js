@@ -4,9 +4,26 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// The loadTweets function will make a jQuery
+// request to /tweets and return a JSON
+// array of tweets.
 
+const loadTweets = () => {
+  $.ajax({
+    url: "/tweets",
+    method: "GET",
+    dataType: "json",
+    success: (tweets) => {
+      console.log("data", tweets);
+      renderTweets(tweets);
+    },
+    error: (err) => {
+      console.log(`error: ${err}`);
+    },
+  });
+};
 
-
+loadTweets();
 
 const createTweetElement = function (obj) {
   const time = timeago.format(obj.created_at);
@@ -55,8 +72,8 @@ const renderTweets = function (tweets) {
 
 /**
  * We can now submit the form data and display the new tweet without
- * having to refresh the page by using jQuery. To accomplish this, 
- * we used an event handler to bypass the standard form submission 
+ * having to refresh the page by using jQuery. To accomplish this,
+ * we used an event handler to bypass the standard form submission
  * process and instead use AJAX to submit the form data.
  */
 const $form = $("#tweetBtn");
@@ -78,8 +95,8 @@ $form.on("submit", function (event) {
     url: "/tweets/",
     method: "POST",
     data: serializedData,
-    success: function(data){
-      console.log('success')
-    }
-  })
+    success: function (data) {
+      console.log("success");
+    },
+  });
 });
