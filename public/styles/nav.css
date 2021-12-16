@@ -19,11 +19,11 @@ nav {
 The header or 'tweeter' title is held at the top by the bungee id below.
 */
 #bungee {
-  font-family: "Bungee", cursive, sans-serif;
+  font-family: "bungee", cursive, sans-serif;
 }
 
 /* 
-This two ids hold the 'write new tweet' and 'tweeter' logo properties,
+This two ids hold the 'write new tweet' and 'tweeter' bungee properties,
 They are separate as the arrow should have a different color(red).
 */
 #newTweet {

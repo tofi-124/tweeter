@@ -34,7 +34,7 @@ const data = [
 ];
 
 /**
- * This function is responsible for taking in an array of tweet 
+ * This function is responsible for taking in an array of tweet
  * objects and then appending each one to the #tweets-container.
  */
 const renderTweets = function (tweets) {
@@ -45,8 +45,8 @@ const renderTweets = function (tweets) {
 };
 
 /**
- * This takes in a tweet object and is responsible for returning 
- * a tweet <article> element containing the entire HTML structure 
+ * This takes in a tweet object and is responsible for returning
+ * a tweet <article> element containing the entire HTML structure
  * of the tweet.
  */
 const createTweetElement = function (obj) {
@@ -89,9 +89,21 @@ const createTweetElement = function (obj) {
  * This here calls in our functions above and works out
  * our final output.
  */
+
 $(document).ready(function () {
   $("#tweetBtn").submit(function (event) {
     event.preventDefault();
     renderTweets(data);
+
+    //Our ajax post request
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:8080/tweets/",
+      data: $("#tweetBtn").serialize(),
+      success: function (data) {
+        console.log("success");
+      },
+    });
+    
   });
 });
