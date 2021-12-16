@@ -13,17 +13,18 @@ nav {
   background-color: #4056a1;
   top: 0;
   position: fixed;
+  z-index: 10;
 }
 
 /*
-The header or 'tweeter' title is held at the top by the bungee id below.
+The header or 'tweeter' title is held at the top by the logo id below.
 */
 #bungee {
   font-family: "bungee", cursive, sans-serif;
 }
 
 /* 
-This two ids hold the 'write new tweet' and 'tweeter' bungee properties,
+This two ids hold the 'write new tweet' and 'tweeter' logo properties,
 They are separate as the arrow should have a different color(red).
 */
 #newTweet {
@@ -33,3 +34,12 @@ They are separate as the arrow should have a different color(red).
   text-align: center;
   color: red;
 }
+
+@media only screen and (max-width: 1024px) {
+  nav{
+    color: #545149;
+    background-color: white;
+    background-image: url(../images/concrete-wall-2.png);
+  }
+}
+

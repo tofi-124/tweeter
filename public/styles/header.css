@@ -13,7 +13,7 @@ TODO: z-index: auto, does it work? it does but you hvae to postion it.
   flex-direction: column;
   justify-content: center;
   background-image: url(../images/concrete-wall-2.png);
-  margin-top: 120px;
+  flex-shrink: 2;
 }
 
 /*
@@ -22,4 +22,3 @@ Default was bold turned it to normal.
 #headerProfile h2 {
   font-weight: normal;
 }
-

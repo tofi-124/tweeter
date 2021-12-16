@@ -69,8 +69,7 @@ The properties of our user icons lies here.
 .icons {
   display: flex;
   margin-left: auto;
-  justify-self: space-between;
-  
+  justify-self: space-between; 
 }
 
 /* 

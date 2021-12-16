@@ -34,6 +34,7 @@ the one which displays tweets.
 The container holds all of the main's contents, its not a flexbox.
 */
 .container {
+  width: 100%;
   padding-left: 4em;
   padding-right: 4em;
   font-family: "Bungee", cursive, sans-serif;
@@ -122,11 +123,18 @@ All properties of the button.
   outline: none;
 }
 
-.button-15:focus {
-  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
-  outline: none;
-}
-
 label {
   opacity: 70%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .button-15 {
+    background-color: #6b665a;
+    border: 1px solid #969080;
+  }
+
+  .button-15:hover {
+    background-image: linear-gradient(#969080, #6b665a);
+    border-color: #969080;
+  }
 }
