@@ -1,8 +1,21 @@
-.counter-red-changer{
-  color: red
+.error {
+  display: none;
+  font-family: "Source Sans Pro";
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
 }
-.counter-default-changer{
-  color: #545149
+
+.counter-red-changer {
+  color: red;
+}
+.counter-default-changer {
+  color: #545149;
 }
 
 /*
@@ -10,9 +23,11 @@ The compose id is used for the styling of the tweeter box,
 the one which displays tweets. 
  */
 #compose {
+  opacity: 80%;
+  font-weight: 500;
   text-align: center;
   font-family: "Source Sans Pro";
-  font-weight: bold;
+  text-shadow: 10px 5px 5px rgba(33, 33, 33, 0.2);
 }
 
 /* 
@@ -42,7 +57,7 @@ the main div or the container This css is where you'll find the properties for i
 /*
 form
 */
-form{
+form {
   font-family: sans-serif;
   font-weight: bold;
 }
@@ -110,4 +125,8 @@ All properties of the button.
 .button-15:focus {
   box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
   outline: none;
+}
+
+label {
+  opacity: 70%;
 }

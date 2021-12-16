@@ -12,10 +12,7 @@ const loadTweets = () => {
     url: "/tweets",
     method: "GET",
     dataType: "json",
-    success: (tweets) => {
-      console.log("data", tweets);
-      renderTweets(tweets);
-    },
+    success: (tweets) => renderTweets(tweets),
     error: (err) => {
       console.log(`error: ${err}`);
     },
@@ -61,7 +58,7 @@ const createTweetElement = function (obj) {
 //Takes in this array of objects and render them to the DOM
 const renderTweets = function (tweets) {
   const $tweetsContainer = $("#tweets-container");
-  $tweetsContainer.html('');
+  $tweetsContainer.html("");
   for (let tweetsOfData of tweets) {
     $tweet = createTweetElement(tweetsOfData);
     $tweetsContainer.prepend($tweet);
@@ -78,16 +75,24 @@ const $form = $("#tweetBtn");
 
 $form.on("submit", function (event) {
   event.preventDefault();
+
   console.log("The form was submitted!");
 
+  let $userInput = $("textarea", this);
+
   //form validation
-  if ($("textarea", this).val().length === 0) {
-    alert("Character empty");
-  } else if ($("textarea", this).val().length > 140) {
-    alert("Character limit exceeded");
+  if ($userInput.val().length > 140) {
+    $(".error").slideDown("slow");
+    $("#errorMessage").text(`Character is too long!`);
+  } else if ($userInput.val().length === 0) {
+    $(".error").slideDown("slow");
+    $("#errorMessage").text(`Character is empty!`);
+  } else if ($userInput.val() === "null" || $userInput.val() === '""') {
+    $(".error").slideDown("slow");
+    $("#errorMessage").text(`Character: ${$userInput.val()} is invalid`);
   } else {
     // Serialized the form data
-    const serializedData = $(this).serialize();
+    const serializedData = $userInput.serialize();
     console.log(serializedData);
 
     $.ajax({

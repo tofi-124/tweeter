@@ -67,7 +67,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2 id="compose">My tweet</h2>
+        <h2 id="compose">
+          “First, solve the problem. Then, write the code.” – John Johnson
+        </h2>
+        <section class="error">
+          <i class="fas fa-exclamation-triangle"></i> &nbsp
+          <span id="errorMessage"></span> &nbsp
+          <i class="fas fa-exclamation-triangle"></i>
+        </section>
         <form id="tweetBtn" action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -81,6 +88,7 @@
             >
           </div>
         </form>
+        
       </section>
       <br />
       <article id="tweets-container"></article>
