@@ -4,51 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-/**
- * This is our hard coded user database.
- */
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
 
-/**
- * This function is responsible for taking in an array of tweet
- * objects and then appending each one to the #tweets-container.
- */
-const renderTweets = function (tweets) {
-  for (let tweetsOfData of tweets) {
-    $tweet = createTweetElement(tweetsOfData);
-    $("#tweets-container").append($tweet);
-  }
-};
 
-/**
- * This takes in a tweet object and is responsible for returning
- * a tweet <article> element containing the entire HTML structure
- * of the tweet.
- */
+
+
 const createTweetElement = function (obj) {
   const time = timeago.format(obj.created_at);
   const $tweet = $(`<article class="tweet-container">
@@ -85,25 +44,42 @@ const createTweetElement = function (obj) {
   return $tweet;
 };
 
+const renderTweets = function (tweets) {
+  const $tweetsContainer = $("#tweets-container");
+  $tweetsContainer.empty;
+  for (let tweetsOfData of tweets) {
+    $tweet = createTweetElement(tweetsOfData);
+    $tweetsContainer.append($tweet);
+  }
+};
+
 /**
- * This here calls in our functions above and works out
- * our final output.
+ * We can now submit the form data and display the new tweet without
+ * having to refresh the page by using jQuery. To accomplish this, 
+ * we used an event handler to bypass the standard form submission 
+ * process and instead use AJAX to submit the form data.
  */
+const $form = $("#tweetBtn");
 
-$(document).ready(function () {
-  $("#tweetBtn").submit(function (event) {
-    event.preventDefault();
-    renderTweets(data);
+$form.on("submit", function (event) {
+  event.preventDefault();
+  console.log("The form was submitted!");
 
-    //Our ajax post request
-    $.ajax({
-      method: "POST",
-      url: "http://localhost:8080/tweets/",
-      data: $("#tweetBtn").serialize(),
-      success: function (data) {
-        console.log("success");
-      },
-    });
-    
-  });
+  // Serialized the form data
+  const serializedData = $(this).serialize();
+  console.log(serializedData);
+
+  // $.post("/tweets", serializedData, (response) => {
+  //   console.log(response);
+  //   loadTweets();
+  // });
+
+  $.ajax({
+    url: "/tweets/",
+    method: "POST",
+    data: serializedData,
+    success: function(data){
+      console.log('success')
+    }
+  })
 });
