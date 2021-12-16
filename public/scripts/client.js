@@ -7,7 +7,6 @@
 // The loadTweets function will make a jQuery
 // request to /tweets and return a JSON
 // array of tweets.
-
 const loadTweets = () => {
   $.ajax({
     url: "/tweets",
@@ -22,8 +21,6 @@ const loadTweets = () => {
     },
   });
 };
-
-loadTweets();
 
 const createTweetElement = function (obj) {
   const time = timeago.format(obj.created_at);
@@ -61,6 +58,7 @@ const createTweetElement = function (obj) {
   return $tweet;
 };
 
+//Takes in this array of objects and render them to the DOM
 const renderTweets = function (tweets) {
   const $tweetsContainer = $("#tweets-container");
   $tweetsContainer.empty;
