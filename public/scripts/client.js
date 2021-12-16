@@ -80,21 +80,22 @@ $form.on("submit", function (event) {
   event.preventDefault();
   console.log("The form was submitted!");
 
-  // Serialized the form data
-  const serializedData = $(this).serialize();
-  console.log(serializedData);
+  if ($("textarea", this).val().length === 0) {
+    alert("Character empty");
+  } else if ($("textarea", this).val().length > 140) {
+    alert("Character limit exceeded");
+  } else {
+    // Serialized the form data
+    const serializedData = $(this).serialize();
+    console.log(serializedData);
 
-  // $.post("/tweets", serializedData, (response) => {
-  //   console.log(response);
-  //   loadTweets();
-  // });
-
-  $.ajax({
-    url: "/tweets/",
-    method: "POST",
-    data: serializedData,
-    success: function (data) {
-      console.log("success");
-    },
-  });
+    $.ajax({
+      url: "/tweets/",
+      method: "POST",
+      data: serializedData,
+      success: function (data) {
+        console.log("success");
+      },
+    });
+  }
 });
