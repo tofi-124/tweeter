@@ -109,7 +109,7 @@ $form.on("submit", function (event) {
   } else {
     $(".error").slideUp("slow");
     $btnUp.slideDown("slow");
-
+    $('output[name="counter"]').html('140');
     // Serialized the form data
     const serializedData = $userInput.serialize();
     console.log(serializedData);
