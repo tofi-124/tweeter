@@ -2,7 +2,6 @@
 All elements within nav are affected by the nav bar below.
 It's the nav bar's container.
 */
-
 nav {
   width: 100vw;
   height: 120px;
@@ -35,6 +34,9 @@ They are separate as the arrow should have a different color(red).
   color: red;
 }
 
+/* 
+This applies to screens less than 1024px
+*/
 @media only screen and (max-width: 1024px) {
   nav{
     color: #545149;

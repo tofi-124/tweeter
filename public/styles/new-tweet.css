@@ -1,3 +1,4 @@
+/* Our error message that gets displayed if there are invalid chx in our input field */
 .error {
   display: none;
   font-family: "Source Sans Pro";
@@ -11,6 +12,7 @@
   color: #a94442;
 }
 
+/* Changes color of counter if chx limit is reached */
 .counter-red-changer {
   color: red;
 }
@@ -127,6 +129,9 @@ label {
   opacity: 70%;
 }
 
+/* 
+This applies to screens less than 1024px
+*/
 @media only screen and (max-width: 1024px) {
   .button-15 {
     background-color: #6b665a;
