@@ -4,17 +4,9 @@ Tweeter is a simple, single-page web app.
 
 ## Final product
 
-<<<<<<< HEAD
-![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/1.gif)
+![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/11.gif)
 
-![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/2.gif)
-=======
-!["Screenshot one"](https://github.com/tofi-124/tweeter/blob/master/docs/1.png)
-
-!["Screenshot two"](https://github.com/tofi-124/tweeter/blob/master/docs/2.png)
-
-!["Desktop view"](https://github.com/tofi-124/tweeter/blob/master/docs/3.png)
->>>>>>> c81e87337cff7fad2d65e8fa66b3bfae8e993980
+![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/22.gif)
 
 ## Dependencies
 
