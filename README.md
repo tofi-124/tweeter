@@ -4,9 +4,9 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final product
 
-!["Screenshot one"](https://github.com/tofi-124/tinyapp/blob/master/docs/chrome-capture.gif)
+![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/1.gif)
 
-!["Screenshot two"](https://github.com/tofi-124/tinyapp/blob/master/docs/chrome-capture (1).gif)
+![Alt Text](https://github.com/tofi-124/tinyapp/blob/master/docs/2.gif)
 
 ## Dependencies
 
