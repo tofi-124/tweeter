@@ -1,13 +1,14 @@
 $(document).ready(function () {
-  // --- our code goes here ---
-  $("#tweet-text").keydown(function () {
-    $('output[name="counter"]').html(139 - this.value.length);
-    if (139 - this.value.length < 0) {
-      $('output[name="counter"]').removeClass('counter-default-changer')
-      $('output[name="counter"]').addClass('counter-red-changer')
+  //Keyip detects backspaces thus used instead of keypress
+  $("#tweet-text").keyup(function () {
+    $('output[name="counter"]').html(140 - this.value.length);
+    if (140 - this.value.length < 0) {
+      //This two are our simple css color changer classes
+      $('output[name="counter"]').removeClass("counter-default-changer");
+      $('output[name="counter"]').addClass("counter-red-changer");
     } else {
-      $('output[name="counter"]').removeClass('counter-red-changer')
-      $('output[name="counter"]').addClass('counter-default-changer')
+      $('output[name="counter"]').removeClass("counter-red-changer");
+      $('output[name="counter"]').addClass("counter-default-changer");
     }
   });
 });
