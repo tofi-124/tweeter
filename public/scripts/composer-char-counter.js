@@ -1,7 +1,6 @@
 $(document).ready(function () {
   // --- our code goes here ---
-
-  $("#tweet-text").keypress(function () {
+  $("#tweet-text").keydown(function () {
     $('output[name="counter"]').html(139 - this.value.length);
     if (139 - this.value.length < 0) {
       $('output[name="counter"]').removeClass('counter-default-changer')
