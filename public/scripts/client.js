@@ -128,4 +128,5 @@ $form.on("submit", function (event) {
   }
 });
 
+//To reload our tweets on refresh or start
 loadTweets()
