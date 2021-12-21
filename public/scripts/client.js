@@ -127,3 +127,5 @@ $form.on("submit", function (event) {
     });
   }
 });
+
+loadTweets()
