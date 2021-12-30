@@ -2,7 +2,7 @@
 To properly display the items, I added the header files, made it a container 
 for all of the divs inside, and used justify content flex direction 
 and align item.
-TODO: z-index: auto, does it work? it does but you hvae to postion it.
+TODO: z-index: auto, does it work? it does but you have to position it.
 */
 
 #headerProfile {
