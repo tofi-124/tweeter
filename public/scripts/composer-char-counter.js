@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //Keyip detects backspaces thus used instead of keypress
-  $("#tweet-text").keyup(function () {
+  $("#tweet-text").on('input',function () {
     $('output[name="counter"]').html(140 - this.value.length);
     if (140 - this.value.length < 0) {
       //This two are our simple css color changer classes
