@@ -1,7 +1,7 @@
 # Tweeter Project
 
 Tweeter is a simple, single-page web app.
-# [Live demo](https://tofis-tweeter.herokuapp.com)
+Click here for [Live demo](https://tofis-tweeter.herokuapp.com)
 
 ## Final product
 
